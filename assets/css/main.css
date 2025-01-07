@@ -1293,7 +1293,14 @@ input, select, textarea {
 						}
 
 		}
- /* Dropdown container */
+ /* Hide Port Nav */
+
+	.panelPort {
+
+		
+	}
+
+/* Dropdown container */
         .dropdown {
             position: relative;
             display: inline-block;
