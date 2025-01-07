@@ -49,7 +49,32 @@
 						window.location.hash = href;
 
 			});
+	// Port Nav.
+document.addEventListener("DOMContentLoaded", function () {
+  // Hide all panelPort elements initially
+  const panels = document.querySelectorAll(".panelPort");
+  panels.forEach(panel => panel.style.display = "none");
 
+  // Function to show the selected panelPort
+  function showPanel(panelId) {
+    panels.forEach(panel => panel.style.display = "none"); // Hide all panels
+    const selectedPanel = document.getElementById(panelId);
+    if (selectedPanel) {
+      selectedPanel.style.display = "block";
+    }
+  }
+
+  // Add event listeners to navigation links
+  const navLinks = document.querySelectorAll("#nav a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      const targetId = this.getAttribute("href").substring(1); // Get the target panel ID
+      showPanel(targetId); // Show the corresponding panel
+    });
+  });
+});
+	
 	// Panels.
 
 		// Initialize.
