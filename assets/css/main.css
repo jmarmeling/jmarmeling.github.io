@@ -1929,6 +1929,7 @@ input, select, textarea {
 		text-align: center;
 		height: 4.25em;
 		cursor: default;
+		display: block;
 	}
 
 		#navPort a {
@@ -1987,8 +1988,8 @@ input, select, textarea {
 				-webkit-transition: opacity .25s ease-in-out;
 				-ms-transition: opacity .25s ease-in-out;
 				transition: opacity .25s ease-in-out;
-				width: max-content;
-				margin-left: -4.8em;
+				width: 9em;
+				margin-left: -4.5em;
 			}
 
 				#navPort a span:after {
