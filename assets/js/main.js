@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add event listeners to navigation links
-  const navLinks = document.querySelectorAll("#nav a");
+  const navLinks = document.querySelectorAll("#navPort a");
   navLinks.forEach(link => {
     link.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent default anchor behavior
