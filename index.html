@@ -2,97 +2,375 @@
 <!--
 Harmeling Portfolio
 -->
-<html>
+<html lang="en">
 	<head>
 		<title>Harmeling Portfolio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+
+		<!-- Overrides the theme's tabbed panel behavior. -->
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+
+			#main > .panel {
+				display: block;
+				opacity: 1;
+				visibility: visible;
+				margin-bottom: 2em;
+			}
+
+			#portfolio section {
+				margin-bottom: 3em;
+			}
+
+			#portfolio h2 {
+				margin-bottom: 1em;
+			}
+
+			#portfolio h3 {
+				margin-bottom: 0.25em;
+			}
+
+			#portfolio h3 + p {
+				margin-bottom: 1.75em;
+			}
+
+			.portfolio-details {
+				margin-top: -1em;
+				margin-bottom: 2em;
+			}
+
+			.portfolio-details p {
+				margin: 0.25em 0;
+			}
+		</style>
 	</head>
+
 	<body class="is-preload">
-		<!-- Wrapper-->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#portfolio" class="icon solid fa-folder"><span>Portfolio</span></a>
-						<a href="mailto:harmeling.johnm@gmail.com" class="icon solid fa-envelope"><span>Email</span></a>
-						<a href="https://www.linkedin.com/in/john-harmeling-6aa816161" class="icon brands fa-linkedin" target="_blank"><span>LinkedIn</span></a>
-					</nav>
+			<!-- Navigation -->
+			<nav id="nav">
+				<a href="#home" class="icon solid fa-home">
+					<span>Home</span>
+				</a>
 
-				<!-- Main -->
-					<div id="main">
+				<a href="#portfolio" class="icon solid fa-folder">
+					<span>Portfolio</span>
+				</a>
 
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>John Mark Harmeling</h1>
-									<p class="description">Technical communicator experienced in writing internal and user facing documentation. Skilled in producing documentation for complex software features to a variety of audiences. Enjoys working closely with others to produce high-quality products.</p>
-								</header>
-								<a href="#portfolio" class="jumplink pic">
-									<!-- <span class="arrow icon solid fa-chevron-right"></span> -->
-									<img src="images/ImgSelf.jpg" alt="" />
-								</a>
-							</article>
+				<a
+					href="mailto:harmeling.johnm@gmail.com"
+					class="icon solid fa-envelope"
+				>
+					<span>Email</span>
+				</a>
 
-						<!-- Portfolio -->
-							<article id="portfolio" class="panel">
-								<header>
-									<h1>Portfolio</h1>
-								</header>
-								<div class="dropdown">
-    								<button class="dropdown-btn">Guides</button>
-    								<div class="dropdown-content">
-        								<h2>User Guides</h2>
-        									<h3><a href="https://docs.unqork.io/Content/A01-ModEditor-General/A01021-Server_Side_Execution_Testing.htm" target="_blank">Server Side Execution Testing in Unqork</a></h3>
-        									<p>A user guide that informs the reader on how to validate end-user input using Unqork's Module Editor software.</p>
-        									<h3>Transforms Using JSON and Nunjucks</h3>
-        									<p>A user guide that shows the reader how to reformat data within Unqork using JSON and Nunjucks.</p>
-        								<h2>Best Practice Guides</h2>
-   								 </div>
-								</div>
-									<h2>User Guides</h2>
-									<br>
-									<h3><a href="https://docs.unqork.io/Content/A01-ModEditor-General/A01021-Server_Side_Execution_Testing.htm" target="_blank">Server Side Execution Testing in Unqork</a></h3>
-										<p>
-										A user guide that informs the reader on how to validate end-user input using Unqork's Module Editor software.
-										</p>
-									<h3>Transforms Using JSON and Nunjucks</h3>
-										<p>A user guide that shows hte reader how to reformat data within Unqork using JSON and Nunjucks.</p>
-									<h2>Best Practice Guides</h2>
-									<br>
-									<h3>Integrations Best Practice Guide</h3>
-										<p>Security best practice guide for integrating Unqork environments with APIs.</p>
-									<h3>Handling Sensitive Data Best Practice Guide</h3>
-										<p>A best practice guide for sensitive data management while using Unqork. </p>
-									<h2>API Documentation</h2>
-									<br>
-									<h3>Building SOAP Call Bodies with Transforms and Plug-Ins</h3>
-										<p>Article explaining how to build SOAP API calls in Unqork.</p>
-									<h3>Setting Up XML Integration</h3>
-										<p>Article explaining how to set up XML integration with SOAP API calls in Unqork.</p>
-									<h2>Unqork Agile Framework Onboarding Guides</h2>
-									<br>
-									<h3>Solutions Architect</h3>
-										<p>Onboarding guide for Solutions Architects at Unqork.</p>
-									<h3>Unit Testing</h3>
-										<p>An article justifying Unqork's use of Unit Testing to asses application configurations.</p>
-								<footer>
-									<h2>Contact</h2>
-									<br>
-									<p>To recieve a copy of a portfolio document, <a href="mailto:harmeling.johnm@gmail.com">send me an email request</a>.</p>
-								</footer>	
-							</article>
-							
+				<a
+					href="https://www.linkedin.com/in/john-harmeling-6aa816161"
+					class="icon brands fa-linkedin"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span>LinkedIn</span>
+				</a>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Introduction -->
+				<article id="home" class="panel intro">
+					<header>
+						<h1>John Mark Harmeling</h1>
+
+						<p class="description">
+							Technical communicator experienced in writing internal and
+							user-facing documentation. Skilled in producing documentation
+							for complex software features for a variety of audiences. Enjoys
+							working closely with others to produce high-quality products.
+						</p>
+					</header>
+
+					<div class="pic">
+						<img src="images/ImgSelf.jpg" alt="John Mark Harmeling" />
+					</div>
+				</article>
+
+				<!-- Portfolio -->
+				<article id="portfolio" class="panel">
+					<header>
+						<h1>Portfolio</h1>
+					</header>
+
+					<!-- Conceptual Documentation -->
+					<section>
+						<h2>Conceptual Documentation</h2>
+
+						<h3>
+							<a
+								href="https://docs.unqork.io/Content/A06-ModEditor-Data_Workflow/A0601-General/A0601002-Data_Types_Introduction.htm"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Introduction to Data Types and Structures
+							</a>
+						</h3>
+
+						<p>
+							Conceptual documentation that describes how Unqork Designer
+							Platform stores data.
+						</p>
+
+						<h3>
+							<a
+								href="https://docs.unqork.io/Content/Y-Cloud_Operate/Y01001C-AWS_Azure_PrivateLink_Patterns.htm"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Introduction to AWS and Azure PrivateLink Services
+							</a>
+						</h3>
+
+						<p>
+							Conceptual documentation that describes AWS and Azure PrivateLink
+							integration with Unqork.
+						</p>
+					</section>
+
+					<!-- Reference and How-to Documentation -->
+					<section>
+						<h2>Reference and How-to Documentation</h2>
+
+						<h3>
+							<a
+								href="https://docs.unqork.io/Content/D-Administration/D08001H-Authentication_Types.htm#Authentication_Service_Type_Settings"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Authentication Types
+							</a>
+						</h3>
+
+						<p>
+							Reference documentation that describes the different ways users
+							can securely connect to external services from the Unqork
+							Designer Platform.
+						</p>
+
+						<h3>
+							<a
+								href="https://docs.unqork.io/Content/Q-References/Q008a-Table_Operations_JSON.htm#Vega_Table_Operations"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Vega Table Operations JSON Reference List
+							</a>
+						</h3>
+
+						<p>
+							Reference documentation describing the Unqork Vega Table
+							component and its operations.
+						</p>
+
+						<h3>
+							<a
+								href="https://docs.unqork.io/Content/A04-ModEditor-Display_Layout/A04006a-Dynamic_Refresh.htm"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Dynamic Refresh
+							</a>
+						</h3>
+
+						<p>
+							How-to documentation describing Dynamic Refresh and how to use it
+							to refresh parts of an Unqork application without reloading the
+							entire page.
+						</p>
+					</section>
+
+					<!-- User Guides -->
+					<section>
+						<h2>User Guides</h2>
+
+						<h3>
+							<a
+								href="https://docs.unqork.io/Content/A01-ModEditor-General/A01021-Server_Side_Execution_Testing.htm"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Server-Side Execution Testing in Unqork
+							</a>
+						</h3>
+
+						<p>
+							A user guide that explains how to validate end-user input using
+							Unqork's Module Editor software.
+						</p>
+
+						<h3>Transforms Using JSON and Nunjucks</h3>
+
+						<p>
+							A user guide that shows readers how to reformat data in Unqork
+							using JSON and Nunjucks.
+						</p>
+					</section>
+
+					<!-- Best Practice Guides -->
+					<section>
+						<h2>Best Practice Guides</h2>
+
+						<h3>Integrations Best Practice Guide</h3>
+
+						<p>
+							A security best practice guide for integrating Unqork
+							environments with APIs.
+						</p>
+
+						<h3>Handling Sensitive Data Best Practice Guide</h3>
+
+						<p>
+							A best practice guide for managing sensitive data while using
+							Unqork.
+						</p>
+					</section>
+
+					<!-- Learning Paths and Courses -->
+					<section>
+						<h2>Learning Paths and Courses</h2>
+
+						<h3>Developer Learning Path</h3>
+
+						<p>
+							A learning path that covers how to set up and create
+							enterprise-level applications using Unqork's SaaS software.
+						</p>
+
+						<div class="portfolio-details">
+							<p>
+								<strong>Audience:</strong>
+								Experienced software developers
+							</p>
+
+							<p>
+								<strong>Length:</strong>
+								142 articles organized into nine learning modules
+							</p>
+						</div>
+
+						<h3>Unqork Agile Framework Course</h3>
+
+						<p>
+							A learning path introducing Unqork's Agile-based delivery
+							methodology, which provides a standard approach for planning,
+							developing, and delivering applications. The course also includes
+							the templates, artifacts, and resources needed to follow the
+							methodology.
+						</p>
+
+						<div class="portfolio-details">
+							<p>
+								<strong>Audience:</strong>
+								All parties involved in application development, with roles
+								and responsibilities addressed throughout the content
+							</p>
+
+							<p>
+								<strong>Length:</strong>
+								50 articles organized into five learning modules
+							</p>
+						</div>
+
+						<h3>Hello World Course</h3>
+
+						<p>
+							An introductory course that introduces Unqork software and
+							teaches learners how to get started using the platform.
+						</p>
+
+						<div class="portfolio-details">
+							<p><strong>Audience:</strong> All learners</p>
+
+							<p>
+								<strong>Length:</strong>
+								34 articles organized into six learning modules
+							</p>
+						</div>
+					</section>
+
+					<!-- Onboarding Guides -->
+					<section>
+						<h2>Unqork Agile Framework Onboarding Guides</h2>
+
+						<h3>Solutions Architect</h3>
+
+						<p>
+							An onboarding guide for Solutions Architects at Unqork.
+						</p>
+
+						<h3>Unit Testing</h3>
+
+						<p>
+							An article explaining Unqork's use of unit testing to assess
+							application configurations.
+						</p>
+					</section>
+
+					<!-- API Documentation -->
+					<section>
+						<h2>API Documentation</h2>
+
+						<h3>Building SOAP Call Bodies with Transforms and Plug-Ins</h3>
+
+						<p>
+							An article explaining how to build SOAP API call bodies in
+							Unqork.
+						</p>
+
+						<h3>Setting Up XML Integration</h3>
+
+						<p>
+							An article explaining how to set up XML integrations for SOAP API
+							calls in Unqork.
+						</p>
+
+						<p>
+							I have also created API documentation for Unqork-related internal
+							and external calls. To request a sample, email
+							<a href="mailto:harmeling.johnm@gmail.com">
+								harmeling.johnm@gmail.com
+							</a>.
+						</p>
+					</section>
+
+					<footer>
+						<h2>Contact</h2>
+
+						<p>
+							To receive a copy of a portfolio document,
+							<a href="mailto:harmeling.johnm@gmail.com">
+								send me an email request
+							</a>.
+						</p>
+					</footer>
+				</article>
+			</div>
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
 	</body>
 </html>
